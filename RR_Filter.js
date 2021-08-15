@@ -1,5 +1,3 @@
-//browser.storage.local.clear()
-
 //-------------------------------------------
 // Récupération du forum où on est
 let prefix;
@@ -99,7 +97,8 @@ async function importList(key) {
   console.log("Import : " + prefix + key);
   let value = await browser.storage.local.get(prefix + key);
   if (Object.keys(value).length === 0){
-	value[prefix + key] = [];
+	//value = [];
+    value[prefix + key] = [];
   }
   console.log("Import value : ", {value});
   //let array = JSON.parse(value);

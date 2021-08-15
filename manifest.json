@@ -5,11 +5,17 @@
   "version": "0.3",
 
   "description": "Improves the Renaissance Kingdoms game official forum.",
-
+  
   "content_scripts": [
     {
-      "matches": ["*://forum.renaissancekingdoms.com/search.php?search_id=*", "*://forum2.renaissancekingdoms.com/search.php?search_id=*"],
-      "js": ["RR_filter.js"]
+      "matches": [
+		"*://forum.renaissancekingdoms.com/search.php?search_id=*", 
+		"*://forum2.renaissancekingdoms.com/search.php?search_id=*"
+		],
+      "js": [
+		"browser-polyfill.js", 
+		"RR_filter.js"
+		]
     }
   ],
   
