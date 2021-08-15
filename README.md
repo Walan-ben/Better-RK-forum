@@ -19,8 +19,7 @@ Les réglages sont sauvegardés *localement* sur le navigateur et seront appliqu
 
 
 # Compatibilité
-A l'heure actuelle, cette extension n'est compatible qu'avec Firefox. 
-La compatibilité avec Chrome est en cours de réalisation.
+Cette extension devrait être compatible avec Firefox et Chrome.
 
 *Note : cette extension n'est pas une extension officielle et n'est pas gérée par Celsius Online, mais par des joueurs de Renaissance Kingdoms.*
 
@@ -44,7 +43,6 @@ Settings are saved *locally* in the browser and will be applied after refreshing
 
 
 # Compatibility
-For now, the extension is only compatible with Firefox. Chrome compatibility is an ongoing work. 
-
+The extension should be compatible with Firefox and Chrome.
 
 *Note : this extension is not an official extension. It was not developped by Celsius Online but by Renaissance Kingdoms players.*
