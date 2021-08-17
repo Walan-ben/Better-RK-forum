@@ -6,6 +6,10 @@
 
   "description": "Improves the Renaissance Kingdoms game official forum.",
   
+    "icons": {
+    "48": "icons/icon48.png"
+  },
+  
   "content_scripts": [
     {
       "matches": [
@@ -13,8 +17,8 @@
 		"*://forum2.renaissancekingdoms.com/search.php?search_id=*"
 		],
       "js": [
-		"browser-polyfill.js", 
-		"RR_filter.js"
+		"scripts/browser-polyfill.js", 
+		"scripts/RR_filter.js"
 		]
     }
   ],
