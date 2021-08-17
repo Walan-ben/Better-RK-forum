@@ -13,8 +13,8 @@ Elle permet d'ajouter pour les deux forums officiels :
 # Utilisation
 L'extension rajoute quatre boutons lors de la visite de l'une des pages de nouveaux messages :
 
-* "Filtrer liste blanche" : n'affiche que les sujets appartenant aux catégories de la liste blanche.
-* "Filtrer liste noire" : retire de l'affichage les sujets appartenant aux catégories de la liste noire.
+* "Filtrer liste blanche" : n'affiche que les catégories de la liste blanche.
+* "Filtrer liste noire" : retire de l'affichage les catégories de la liste noire.
 * "Annuler filtres" : retire les filtres pour rétablir la liste initiale. 
 * "Afficher/cacher réglages" : permet d'afficher ou de cacher les réglages. 
 
@@ -42,8 +42,8 @@ It adds for both official forums:
 # Use
 The extension adds four buttons when browsing one of the new posts pages :
 
-* "Filtrer liste blanche" : display only topics from categories in the white list. 
-* "Filtrer liste noire" : hide topics from categories in the black list.
+* "Filtrer liste blanche" : display only categories in the white list. 
+* "Filtrer liste noire" : hide categories in the black list.
 * "Annuler filtres" : cancel filters to go back to the original list.
 * "Afficher/cacher réglages" : hide or show the settings. 
 
