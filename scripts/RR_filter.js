@@ -28,7 +28,8 @@ function applyBtnStyle(el){
 
 // Emplacements et styles des boutons/zones de texte
 let placeBtn = document.querySelector('.nav:first-child');
-//let Place_txtarea = document.querySelector('span.mainmenu:last-child');
+let tr = document.createElement("tr");
+let placeTxtArea = placeBtn.parentNode.parentNode.parentNode.parentNode.appendChild(tr);
 
 // Sauvegarde des éléments de la table initiale
 const allTr = document.querySelectorAll(".forumline > tbody > tr");
@@ -40,15 +41,17 @@ function createFilterBtn(name, label, place){
   let btn = document.createElement("button");
     btn.id = name;
     btn.textContent = label;
+	btn.type = "button";
     btn.style = styleBtn;
     applyBtnStyle(btn);
-  place.appendChild(btn);
+    place.appendChild(btn);
 }
 
 function createSaveBtn(name, place){
   let btn = document.createElement("button");
-    btn.textContent = "Sauvegarder";
     btn.id = name;
+    btn.textContent = "Sauvegarder";
+	btn.type = "button";
     applyBtnStyle(btn);
 	place.parentNode.parentNode.appendChild(btn);
 }
@@ -69,18 +72,16 @@ function createTextarea(name, label, place, value = []){
     txtarea.placeholder = label + "  \n - à remplir, séparer les noms des forums par des ; \n - la sauvegarde sera prise en compte au prochain chargement de la page";
     txtarea.value = value.join(' ;\n');
   let td = document.createElement("td");
-  td.appendChild(txt).appendChild(txtarea);
-	place.parentNode.parentNode.parentNode.appendChild(td);
+    td.appendChild(txt).appendChild(txtarea);
+	place.appendChild(td);
 }
 
 // Fonctions filtres et annulation
 function filter(array) {
-  console.log("Filter");
   array.forEach(el => el.parentNode.style.display = "none");
 }
 
 function cancelFilter() {
-  console.log("cancel");
   allTr.forEach(el => el.style.display = '');
 }
 
@@ -94,29 +95,28 @@ function toggleDiplay(el) {
 
 // Import et export données
 async function importList(key) {
-  console.log("Import : " + prefix + key);
+  //console.log("Import : " + prefix + key);
   let value = await browser.storage.local.get(prefix + key);
   if (Object.keys(value).length === 0){
 	//value = [];
     value[prefix + key] = [];
   }
-  console.log("Import value : ", {value});
+  //console.log("Import value : ", {value});
   //let array = JSON.parse(value);
   let array = value[prefix + key];
   array = array.map(i => i.trim());
-  console.log("Import array : ", {array});
-	return array;
+  //console.log("Import array : ", {array});
+  return array;
 }
 
 function exportList(key, object) {
   let content = object.value;
-  console.log("Export ", {content}, " in " + key);
+  //console.log("Export ", {content}, " in " + key);
   let re = /\s*;\s*/;
   let toSave = {};
   toSave[prefix + key] = content.split(re);
-  console.log("Export tosave : ", {toSave});
+  //console.log("Export tosave : ", {toSave});
   //tosave = JSON.stringify(tosave);
-  //console.log("Export tosave JSON : ", {tosave});
   browser.storage.local.set(toSave);
 }
 
@@ -129,20 +129,18 @@ function escapeRegExp(string) {
   //----------------------------------------------
   // Définition des listes blanches et noires
   let whiteList = await importList("wlSaved");
-  console.log("whiteList : ", {whiteList});
   let whiteListEsc = whiteList.map(el => escapeRegExp(el));
   let wlRegex = new RegExp (whiteListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
   let wlFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td:nth-of-type(2)")).filter(el => !wlRegex.test(el.textContent));
 
   let blackList = await importList("blSaved");
-  console.log("blackList : ", {blackList});
   let blackListEsc = blackList.map(el => escapeRegExp(el));
   let blRegex = new RegExp (blackListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
   let blFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td:nth-of-type(2)")).filter(el => blRegex.test(el.textContent));
 
   //--------------------------------------------
   // Boutons liste blanche
-  createTextarea("whiteTextArea", "Liste blanche", placeBtn, whiteList);
+  createTextarea("whiteTextArea", "Liste blanche", placeTxtArea, whiteList);
   let wlTxtArea = document.getElementById("whiteTextArea");
     wlTxtArea.style.display = "none";
   let wlTxtLbl = document.getElementById("whiteTextAreaLbl");
@@ -151,19 +149,21 @@ function escapeRegExp(string) {
   createSaveBtn("saveWhiteList", wlTxtArea);
   let wlSave = document.getElementById("saveWhiteList");
   wlSave.style.display = "none";
-  wlSave.addEventListener("click", function(){
+  wlSave.addEventListener("click", function(e){
+	e.preventDefault();
   	exportList("wlSaved", wlTxtArea);
     //console.log(wlTxtArea.value);
 	});
   
   createFilterBtn("whiteList", "Filtrer liste blanche", placeBtn);
   let wlBtn = document.getElementById("whiteList");
-  wlBtn.addEventListener("click", function(){
+  wlBtn.addEventListener("click", function(e){
+	e.preventDefault();
     filter(wlFilterArray);
   });
 
   // Boutons liste noire
-  createTextarea("blackTextArea", "Liste noire", placeBtn, blackList);
+  createTextarea("blackTextArea", "Liste noire", placeTxtArea, blackList);
   let blTxtArea = document.getElementById("blackTextArea");
     blTxtArea.style.display = "none";
   let blTxtLbl = document.getElementById("blackTextAreaLbl");
@@ -172,26 +172,32 @@ function escapeRegExp(string) {
   createSaveBtn("saveBlackList", blTxtArea);
   let blSave = document.getElementById("saveBlackList");
   blSave.style.display = "none";
-  blSave.addEventListener("click", function(){
+  blSave.addEventListener("click", function(e){
+	e.preventDefault();
   	exportList("blSaved", blTxtArea);
     //console.log(blTxtArea.value);
-	});
+  });
 
   createFilterBtn("blackList", "Filtrer liste noire", placeBtn);
   let blBtn = document.getElementById("blackList");
-  blBtn.addEventListener("click", function(){
+  blBtn.addEventListener("click", function(e){
+	e.preventDefault();
     filter(blFilterArray);
   });
   
   // Bouton annulation de filtres
   createFilterBtn("cancel", "Annuler filtres", placeBtn);
   let cancelBtn = document.getElementById("cancel");
-  cancelBtn.addEventListener("click", cancelFilter);
+  cancelBtn.addEventListener("click", function(e){
+	e.preventDefault();
+	cancelFilter()
+  });
   
   // Bouton réglages
   createFilterBtn("settings", "Afficher réglages", placeBtn);
   let settingBtn = document.getElementById("settings");
-  settingBtn.addEventListener("click", function(){
+  settingBtn.addEventListener("click", function(e){
+	e.preventDefault();
     if (wlTxtArea.style.display === "none"){
       settingBtn.textContent = "Cacher réglages";
     } else {
@@ -206,6 +212,3 @@ function escapeRegExp(string) {
   });
 
 })();
-
-
-// A faire : permettre la même chose sur l'affichage des catégories sur l'index du forum
