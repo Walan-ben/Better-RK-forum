@@ -2,18 +2,20 @@
 
   "manifest_version": 2,
   "name": "Better RK forum",
-  "version": "0.3",
+  "version": "0.4",
 
   "description": "Improves the Renaissance Kingdoms game official forum.",
   
     "icons": {
-    "48": "icons/icon48.png",	    
-    "96": "icons/icon96.png"
+    "48": "icons/icon48.png",
+	"96": "icons/icon96.png"
   },
   
   "content_scripts": [
     {
       "matches": [
+		"*://forum.renaissancekingdoms.com/index.php*",
+		"*://forum2.renaissancekingdoms.com/index.php*",
 		"*://forum.renaissancekingdoms.com/search.php?search_id=*", 
 		"*://forum2.renaissancekingdoms.com/search.php?search_id=*"
 		],
