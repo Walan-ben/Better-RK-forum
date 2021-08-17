@@ -1,9 +1,14 @@
 *(English version below)*
 
 # Better-RK-forum
+v0.4
+
 Cette extension améliore les forums officiels du jeu ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
-Elle permet d'ajouter des filtres aux pages de recherches de nouveaux messages ("Voir les nouveaux messages depuis votre dernière visite", "Voir ses messages", "Voir les messages sans réponses").
+Elle permet d'ajouter pour les deux forums officiels :
+
+* des filtres à l'index du forum.
+* des filtres aux pages de recherches de nouveaux messages ("Voir les nouveaux messages depuis votre dernière visite", "Voir ses messages", "Voir les messages sans réponses").
 
 # Utilisation
 L'extension rajoute quatre boutons lors de la visite de l'une des pages de nouveaux messages :
@@ -25,9 +30,14 @@ Cette extension devrait être compatible avec Firefox et Chrome.
 
 ---
 # Better-RK-forum
+v0.4
+
 This extension improves ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com) game forums. 
 
-It adds filters to new posts lists of both officiel forums. 
+It adds for both official forums:
+
+* filters to index.
+* filters to new posts lists.
 
 # Use
 The extension adds four buttons when browsing one of the new posts pages :
