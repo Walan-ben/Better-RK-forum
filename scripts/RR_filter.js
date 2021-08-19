@@ -58,11 +58,13 @@ function cancelFilter() {
   //----------------------------------------------
   // Définition des listes blanches et noires
   let whiteList = await importList("wlSaved");
+  whiteList = whiteList.filter(word => word.length !== 0);
   let whiteListEsc = whiteList.map(el => escapeRegExp(el));
   let wlRegex = new RegExp (whiteListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
   let wlFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td:nth-of-type(2)")).filter(el => !wlRegex.test(el.textContent));
 
   let blackList = await importList("blSaved");
+  blackList = blackList.filter(word => word.length !== 0);
   let blackListEsc = blackList.map(el => escapeRegExp(el));
   let blRegex = new RegExp (blackListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
   let blFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td:nth-of-type(2)")).filter(el => blRegex.test(el.textContent));
