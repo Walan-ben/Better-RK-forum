@@ -1,8 +1,7 @@
 *(English version below)*
 
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum 
-Dernière version publiée : v0.4
-En cours de développement : v0.5, ajout de liste d'ignorés.
+v0.4
 
 Cette extension améliore les forums officiels du jeu ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
@@ -30,8 +29,7 @@ Cette extension devrait être compatible avec Firefox et Chrome.
 
 ---
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum
-Last published version: v0.4
-In development: v0.5, adding ignored list.
+v0.4
 
 This extension improves officials forums for the ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com) game. 
 
