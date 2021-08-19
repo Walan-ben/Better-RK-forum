@@ -21,6 +21,7 @@
 		],
       "js": [
 		"scripts/browser-polyfill.js", 
+		"scripts/RR_utils.js",
 		"scripts/RR_filter.js"
 		]
     }
