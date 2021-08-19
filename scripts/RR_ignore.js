@@ -79,7 +79,7 @@ function cancelFilter(array) {
 	//console.log({igFilterArray});
 
 	//--------------------------------------------
-	// Boutons liste blanche
+	// Boutons liste ignorés
 	createTextarea("ignoreTextArea", "Liste d'ignorés", placeTxtArea, ignoreList);
 	let igTxtArea = document.getElementById("ignoreTextArea");
 		igTxtArea.style.display = "none";
