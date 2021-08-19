@@ -68,9 +68,14 @@ function cancelFilter(array) {
 	//----------------------------------------------
 	// Définition des listes blanches et noires
 	let ignoreList = await importList("igSaved");
+	ignoreList = ignoreList.filter(word => word.length !==0);
 	let ignoreListEsc = ignoreList.map(el => escapeRegExp(el));
 	let igRegex = new RegExp (ignoreListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
-	let igFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td > span.name")).filter(el => igRegex.test(el.textContent));
+	if(ignoreList.length === 0){
+		igFilterArray = [];
+	} else {
+		igFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td > span.name")).filter(el => igRegex.test(el.textContent));
+	}
 	//console.log({igFilterArray});
 
 	//--------------------------------------------
