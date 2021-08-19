@@ -47,7 +47,7 @@ function createTextarea(name, label, place, value = []){
 
 // Fonctions filtres et annulation
 function filter(array) {
-  array.forEach(el => el.parentNode.style.display = "none");
+  array.forEach(el => el.parentNode.parentNode.parentNode.style.display = "none");
 }
 
 function cancelFilter() {
@@ -61,13 +61,13 @@ function cancelFilter() {
   whiteList = whiteList.filter(word => word.length !== 0);
   let whiteListEsc = whiteList.map(el => escapeRegExp(el));
   let wlRegex = new RegExp (whiteListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
-  let wlFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td:nth-of-type(2)")).filter(el => !wlRegex.test(el.textContent));
+  let wlFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td:nth-of-type(2) > span > a")).filter(el => !wlRegex.test(el.textContent));
 
   let blackList = await importList("blSaved");
   blackList = blackList.filter(word => word.length !== 0);
   let blackListEsc = blackList.map(el => escapeRegExp(el));
   let blRegex = new RegExp (blackListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
-  let blFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td:nth-of-type(2)")).filter(el => blRegex.test(el.textContent));
+  let blFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td:nth-of-type(2) > span > a")).filter(el => blRegex.test(el.textContent));
 
   //--------------------------------------------
   // Boutons liste blanche
