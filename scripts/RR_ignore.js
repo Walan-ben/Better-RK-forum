@@ -50,8 +50,8 @@ function filter(array) {
 		//console.log({wholeLine});
 		let msgContent = wholeLine.querySelector(".postbody");
 		//console.log({msgContent});
-		msgContent.dataset.oldContent = msgContent.innerHTML;
-		msgContent.innerHTML = "<i>Better RK forum : Ce message a été retiré car son auteur fait partie de votre liste d'ignorés.</i>";
+		msgContent.parentNode.dataset.oldContent = msgContent.parentNode.innerHTML;
+		msgContent.parentNode.innerHTML = '<span class = "postbody"><i>Better RK forum : Ce message a été retiré car son auteur fait partie de votre liste d\'ignorés.</i></span>';
   });
 }
 
@@ -60,7 +60,7 @@ function cancelFilter(array) {
 		let wholeLine = el.parentNode.parentNode;
 		console.log({wholeLine});
 		let msgContent = wholeLine.querySelector(".postbody");
-		msgContent.innerHTML = msgContent.dataset.oldContent;
+		msgContent.parentNode.innerHTML = msgContent.parentNode.dataset.oldContent;
   });
 }
 
