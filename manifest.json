@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Better RK forum",
-  "version": "0.5.1",
+  "version": "0.6",
 
   "description": "Improves the Renaissance Kingdoms game official forum.",
   
@@ -12,30 +12,44 @@
   },
   
   "content_scripts": [
-    {
+  {
       "matches": [
-		"*://forum.renaissancekingdoms.com/index.php*",
-		"*://forum2.renaissancekingdoms.com/index.php*",
-		"*://forum.renaissancekingdoms.com/search.php?search_id=*", 
-		"*://forum2.renaissancekingdoms.com/search.php?search_id=*"
-		],
+	  "*://forum.renaissancekingdoms.com/index.php*",
+	  "*://forum2.renaissancekingdoms.com/index.php*"
+	  ],
       "js": [
-		"scripts/browser-polyfill.js", 		
-		"scripts/RR_utils.js",
-		"scripts/RR_filter.js"
-		]
-    },
-	{
+	  "scripts/browser-polyfill.js", 			
+	  "scripts/RR_utils.js",
+	  "scripts/RR_newmessage_icons.js",
+	  "scripts/RR_filter.js"
+	  ]
+  },
+  {
+	  "matches": [
+	  "*://forum.renaissancekingdoms.com/search.php?search_id=*", 
+	  "*://forum2.renaissancekingdoms.com/search.php?search_id=*"
+	  ],
+      "js": [
+	  "scripts/browser-polyfill.js", 		
+	  "scripts/RR_utils.js",
+	  "scripts/RR_filter.js"
+	  ]
+  },
+  {
       "matches": [
-		"*://forum.renaissancekingdoms.com/viewtopic.php*",
-		"*://forum2.renaissancekingdoms.com/viewtopic.php*"
-		],
+	  "*://forum.renaissancekingdoms.com/viewtopic.php*",
+	  "*://forum2.renaissancekingdoms.com/viewtopic.php*"
+	  ],
       "js": [
-		"scripts/browser-polyfill.js", 
-		"scripts/RR_utils.js",
-		"scripts/RR_ignore.js"
-		]
-    }
+	  "scripts/browser-polyfill.js", 
+	  "scripts/RR_utils.js",
+	  "scripts/RR_ignore.js"
+	  ]
+  }
+  ],
+  
+  "web_accessible_resources": [
+	"images/new_message.png"
   ],
   
   "permissions": ["storage"]

@@ -1,3 +1,4 @@
+//--------------------------------------------
 // Définition styles complémentaires
 let styleBtn = "margin-left:5px; border-width: 1px 1px 1px 1px; border-radius: 4px; font-family: Georgia, Arial, Helvetica, sans-serif;";
 let styleLbl = "display: block; margin-bottom: 5px;";
@@ -39,6 +40,7 @@ function toggleDiplay(el) {
 	}
 }
 
+//--------------------------------------------
 // Import et export données
 async function importList(key) {
   //console.log("Import : " + prefix + key);
@@ -66,7 +68,17 @@ function exportList(key, object) {
   browser.storage.local.set(toSave);
 }
 
-// Utilitaire
+//--------------------------------------------
+// Utilitaires
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
+
+// Conversion de la date string en date objet
+function parseFrenchDate(string){
+	const frenchMonths = {"Jan":0, "Fév":1, "Mar":2, "Avr":3, "Mai":4, "Juin":5, "Juil":6, "Aoû":7, "Sep":8, "Oct":9, "Nov":10, "Déc":11};
+	const regexFormat = /(?<day>\d{2}) (?<month>\D+) (?<year>\d{4}) (?<hour>\d{2}):(?<minute>\d{2})/;  
+	let {groups: {day, month, year, hour, minute}} = regexFormat.exec(string);
+	let dateConvert = new Date(year, frenchMonths[month], day, hour, minute);
+	return dateConvert;
 }

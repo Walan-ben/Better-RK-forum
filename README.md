@@ -1,7 +1,7 @@
 *(English version below)*
 
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum 
-v0.5
+v0.6
 
 Cette extension améliore les forums officiels du jeu ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
@@ -9,9 +9,11 @@ Elle permet d'ajouter pour les deux forums officiels :
 
 * des filtres à l'index du forum.
 * des filtres aux pages de recherches de nouveaux messages.
-* *Nouveauté v0.5 :* un filtre de comptes ignorés aux pages de lecture des sujets.
+* un filtre de comptes ignorés aux pages de lecture des sujets.
+* *Nouveauté v0.6 :* l'affichage d'icônes de nouveaux messages à l'index du forum.
 
 ## Utilisation
+
 ### Liste blanche et liste noire
 L'extension rajoute quatre boutons lors de la visite de l'index ou de l'une des pages de nouveaux messages ("Voir les nouveaux messages depuis votre dernière visite", "Voir ses messages", "Voir les messages sans réponses") :
 
@@ -39,6 +41,12 @@ La liste est commune aux deux forums.
 
 Les réglages sont sauvegardés *localement* sur le navigateur et seront appliqués une fois la page rechargée. 
 
+### Icônes de nouveaux messages
+Sur l'index du forum, cette fonctionnalité change l'icône des catégories pour signaler que de nouveaux messages ont été postés.
+
+La "nouveauté" des messages est basée sur la date de dernière visite indiquée sur l'index du forum et la date des derniers messages des catégories. 
+Elle ne dépend pas de si ces messages ont été lus ou non.
+
 ## Compatibilité
 Cette extension devrait être compatible avec Firefox et Chrome.
 
@@ -46,17 +54,19 @@ Cette extension devrait être compatible avec Firefox et Chrome.
 
 ---
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum
-v0.5
+v0.6
 
 This extension improves the official forums of the game ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
 It adds for both official forums:
 
 * filters to the forum index.
-* Filters to the search pages for new posts.
-* *New in v0.5:* a filter of ignored accounts to the reading pages of the topics.
+* filters to the search pages for new posts.
+* a filter of ignored accounts to the reading pages of the topics.
+* *new in v0.6:* display a new posts icons on the forum index.
 
 ## Usage
+
 ### White list and black list
 The extension adds four buttons when visiting the index or any of the new posts pages ("See new posts since your last visit", "See my posts", "See unanswered posts"):
 
@@ -83,6 +93,12 @@ The names of the different accounts must be separated by semicolons.
 The list is common to both forums.
 
 The settings are saved *locally* on the browser and will be applied when the page is reloaded. 
+
+### New posts icons
+On the forum index, this feature changes categories' icon when there are new posts in it.
+
+"New posts" are defined based on the last visit date displayed on the forum index and on the last posts date displayed for each category. 
+It does not depend on whether these messages have been read or not.
 
 ## Compatibility
 This extension should be compatible with Firefox and Chrome.
