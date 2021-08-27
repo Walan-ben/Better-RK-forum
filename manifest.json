@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Better RK forum",
-  "version": "0.6.0",
+  "version": "0.7",
 
   "description": "Improves the Renaissance Kingdoms game official forum.",
   
@@ -45,11 +45,37 @@
 	  "scripts/RR_utils.js",
 	  "scripts/RR_ignore.js"
 	  ]
+  },
+  {
+      "matches": [
+	  "*://forum.renaissancekingdoms.com/posting.php*",
+	  "*://forum.renaissancekingdoms.com/privmsg.php*",
+	  "*://forum2.renaissancekingdoms.com/posting.php*",
+	  "*://forum2.renaissancekingdoms.com/privmsg.php*"
+	  ],
+      "js": [
+	  "scripts/browser-polyfill.js", 
+	  "scripts/RR_tags.js"
+	  ]
   }
   ],
   
+    "options_ui": {
+    "page": "settings/options.html"
+  },
+  
   "web_accessible_resources": [
-	"images/new_message.png"
+	"images/new_message.png",
+	"images/align-center.png",
+	"images/align-right.png",
+	"images/horizontal-dash.png",
+	"images/horizontal-dot.png",
+	"images/horizontal-rule.png",
+	"images/spoiler.png",
+	"images/strikethrough.png",
+	"images/subscript.png",
+	"images/superscript.png",
+	"images/ui_icone_fichePerso.png"
   ],
   
   "permissions": ["storage"]
