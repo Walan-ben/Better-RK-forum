@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Paramètres</title>
+		 <meta charset="utf-8">
+	</head>
+	<body>
+		<p><span style="text-decoration: underline;"><strong>Modules activés :</strong></span>
+			<table style="width: 45%; border-collapse: collapse;" border="0">
+		<tbody>
+			<tr>
+				<td>Liste blanche et liste noire :</td>
+				<td><input id="settingsWhiteLists" name="settingsWhiteLists" type="checkbox" checked="true"/></td>
+			</tr>
+			<tr>
+				<td>Liste d'ignor&eacute;s :</td>
+				<td><input id="settingsIgnoreList" name="settingsIgnoreList" type="checkbox" checked="true"/></td>
+			</tr>
+			<tr>
+				<td>Ic&ocirc;nes de nouveaux messages :</td>
+				<td><input id="settingsNewMsg" name="settingsNewMsg" type="checkbox" checked="true"/></td>
+			</tr>
+			<tr>
+				<td>Balises dans la rédaction de messages :</td>
+				<td><input id="settingsNewTags" name="settingsNewTags" type="checkbox" checked="true"/></td>
+			</tr>
+		</tbody>
+		</table></p>
+		<div style="text-align: right;" id="status"></div>
+		<p style="text-align: right;"><button id="settingsSave">Sauvegarder</button></p>
+
+		<script src="options.js"></script>
+	</body>
+</html>

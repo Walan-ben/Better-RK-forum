@@ -130,10 +130,16 @@ function insertTag(e) {
 }
 
 // Ajout des boutons
-let newTr = document.createElement("tr");
-let loc = document.querySelector(placeBtn);
-loc = loc.parentNode.parentNode.parentNode.previousElementSibling;
-loc.parentNode.insertBefore(newTr, loc);
-for(let t in newBtns) {
-  createBtn(newBtns[t], newTr);
-}
+(async() => {
+	let onOffTags = await browser.storage.local.get("onOffTags");
+	
+	if (onOffTags["onOffTags"]){
+		let newTr = document.createElement("tr");
+		let loc = document.querySelector(placeBtn);
+		loc = loc.parentNode.parentNode.parentNode.previousElementSibling;
+		loc.parentNode.insertBefore(newTr, loc);
+		for(let t in newBtns) {
+			createBtn(newBtns[t], newTr);
+		}
+	}
+})();
