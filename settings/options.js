@@ -6,7 +6,7 @@ function save_options() {
   let onOffMsgs = document.getElementById('settingsNewMsg').checked;
   let onOffTags = document.getElementById('settingsNewTags').checked;
   
-  browser.storage.local.set({
+  chrome.storage.local.set({
 	onOffWL: onOffWL,
 	onOffIgnore: onOffIgnore,
 	onOffMsgs: onOffMsgs,
@@ -25,7 +25,7 @@ function save_options() {
 // stored in chrome.storage.
 function restore_options() {
   // Use default value color = 'red' and likesColor = true.
-  browser.storage.local.get({
+  chrome.storage.local.get({
 	onOffWL: true,
 	onOffIgnore: true,
 	onOffMsgs: true,
