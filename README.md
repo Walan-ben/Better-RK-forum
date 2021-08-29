@@ -58,6 +58,7 @@ Cette extension devrait être compatible avec Firefox et Chrome.
 
 ## Crédits
 L'image de nouveaux messages sur l'index est modifiée à partir de [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ar_Icon_Article.svg).
+
 Les images utilisées pour les boutons dans l'éditeur de messages sont modifiées à partir d'icones de [Fontawesome](https://fontawesome.com/license/free), à l'exception de l'image de fiche de personnage qui est directement issue de ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
 *Note : cette extension n'est pas une extension officielle et n'est pas gérée par Celsius Online, mais par des joueurs de Renaissance Kingdoms.*
@@ -122,6 +123,7 @@ This extension should be compatible with Firefox and Chrome.
 
 ## Credits
 The image of new posts on the index is modified from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ar_Icon_Article.svg).
+
 The images used for the buttons in the message editor are modified from icons by [Fontawesome](https://fontawesome.com/license/free), except for the character sheet image which is directly from ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
 
