@@ -55,6 +55,12 @@ function replaceImgAll(listLines, lastVisit){
 }
 
 // Application
-let lastVisit = parseFrenchDate(getLastVisit());
-//console.log({lastVisit});
-replaceImgAll(listLines, lastVisit);
+(async() => {
+	let onOffMsgs = await browser.storage.local.get("onOffMsgs");
+	
+	if (onOffMsgs["onOffMsgs"]){
+		let lastVisit = parseFrenchDate(getLastVisit());
+		//console.log({lastVisit});
+		replaceImgAll(listLines, lastVisit);
+	}
+})();

@@ -1,7 +1,7 @@
 *(English version below)*
 
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum 
-v0.7.0
+v0.8.0
 
 Cette extension améliore les forums officiels du jeu ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
@@ -11,7 +11,9 @@ Elle permet d'ajouter pour les deux forums officiels :
 * des filtres aux pages de recherches de nouveaux messages.
 * un filtre de comptes ignorés aux pages de lecture des sujets.
 * l'affichage d'icônes de nouveaux messages à l'index du forum.
-* *Nouveauté v0.7 :* des boutons permettant d'utiliser des balises supplémentaires pour la rédaction de messages (spoiler, char, center,...) (inspiré d'un script de jdOrandin)
+* des boutons permettant d'utiliser des balises supplémentaires pour la rédaction de messages (spoiler, char, center,...) (inspiré d'un script de jdOrandin)
+
+*Nouveauté v0.8 :* Chaque fonctionnalité peut être activée ou désactivée individuellement depuis les options de l'extension.
 
 ## Utilisation
 
@@ -55,13 +57,15 @@ Inspiré par un script de jdOrandin, cette fonctionnalité ajoute aux fenêtres 
 Cette extension devrait être compatible avec Firefox et Chrome.
 
 ## Crédits
-Les images utilisées pour les boutons dans l'éditeur de messages sont modifiées à partir d'icones de [Fontawesome](https://fontawesome.com/license/free).
+L'image de nouveaux messages sur l'index est modifiée à partir de [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ar_Icon_Article.svg).
+
+Les images utilisées pour les boutons dans l'éditeur de messages sont modifiées à partir d'icones de [Fontawesome](https://fontawesome.com/license/free), à l'exception de l'image de fiche de personnage qui est directement issue de ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
 *Note : cette extension n'est pas une extension officielle et n'est pas gérée par Celsius Online, mais par des joueurs de Renaissance Kingdoms.*
 
 ---
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum
-v0.7.0
+v0.8.0
 
 This extension improves the official forums of the game ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
@@ -71,7 +75,9 @@ It adds for both official forums:
 * filters to the search pages for new posts.
 * a filter of ignored accounts to the reading pages of the topics.
 * display a new posts icons on the forum index.
-* *new in v0.7 :* buttons to use additional tags in posts edition (spoiler, char, center,...) (inspired by a script from jdOrandin)
+* buttons to use additional tags in posts edition (spoiler, char, center,...) (inspired by a script from jdOrandin)
+
+*New in v0.8:* Each feature can be enabled or disabled individually from the extension options.
 
 ## Usage
 
@@ -116,7 +122,9 @@ These buttons allow to use the following tags: center (align center), right (ali
 This extension should be compatible with Firefox and Chrome.
 
 ## Credits
-Images used for the buttons in posts edition were modified from icons by [Fontawesome](https://fontawesome.com/license/free).
+The image of new posts on the index is modified from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ar_Icon_Article.svg).
+
+The images used for the buttons in the message editor are modified from icons by [Fontawesome](https://fontawesome.com/license/free), except for the character sheet image which is directly from ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
 
 *Note: this extension is not an official extension and is not managed by Celsius Online, but by Renaissance Kingdoms players.*

@@ -58,71 +58,74 @@ function filter(array) {
 function cancelFilter(array) {
 	array.forEach(function(el){
 		let wholeLine = el.parentNode.parentNode;
-		console.log({wholeLine});
+		//console.log({wholeLine});
 		let msgContent = wholeLine.querySelector(".postbody");
 		msgContent.parentNode.innerHTML = msgContent.parentNode.dataset.oldContent;
   });
 }
 
 (async() => {
-	//----------------------------------------------
-	// Définition des listes blanches et noires
-	let ignoreList = await importList("igSaved");
-	ignoreList = ignoreList.filter(word => word.length !==0);
-	let ignoreListEsc = ignoreList.map(el => escapeRegExp(el));
-	let igRegex = new RegExp (ignoreListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
-	if(ignoreList.length === 0){
-		igFilterArray = [];
-	} else {
-		igFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td > span.name")).filter(el => igRegex.test(el.textContent));
-	}
-	//console.log({igFilterArray});
-
-	//--------------------------------------------
-	// Boutons liste ignorés
-	createTextarea("ignoreTextArea", "Liste d'ignorés", placeTxtArea, ignoreList);
-	let igTxtArea = document.getElementById("ignoreTextArea");
-		igTxtArea.style.display = "none";
-	let igTxtLbl = document.getElementById("ignoreTextAreaLbl");
-		igTxtLbl.style.display = "none";
-	  
-	createSaveBtn("saveIgnoreList", igTxtArea);
-	let igSave = document.getElementById("saveIgnoreList");
-		igSave.style.display = "none";
-		igSave.addEventListener("click", function(e){
-		e.preventDefault();
-		exportList("igSaved", igTxtArea);
-		console.log(igTxtArea.value);
-	});
-	  
-	createFilterBtn("ignoreList", "Filtrer ignorés", placeBtn);
-	let igBtn = document.getElementById("ignoreList");
-	igBtn.addEventListener("click", function(e){
-		e.preventDefault();
-		filter(igFilterArray);
-	});
-	  
-	// Bouton annulation de filtres
-	createFilterBtn("cancel", "Annuler filtre", placeBtn);
-	let cancelBtn = document.getElementById("cancel");
-	cancelBtn.addEventListener("click", function(e){
-		e.preventDefault();
-		cancelFilter(igFilterArray);
-	});
-	  
-	// Bouton réglages
-	createFilterBtn("settings", "Afficher réglages", placeBtn);
-	let settingBtn = document.getElementById("settings");
-	settingBtn.addEventListener("click", function(e){
-		e.preventDefault();
-		if (igTxtArea.style.display === "none"){
-			settingBtn.textContent = "Cacher réglages";
+	let onOffIgnore = await browser.storage.local.get("onOffIgnore");
+	
+	if (onOffIgnore["onOffIgnore"]){
+		//----------------------------------------------
+		// Définition des listes blanches et noires
+		let ignoreList = await importList("igSaved");
+		ignoreList = ignoreList.filter(word => word.length !==0);
+		let ignoreListEsc = ignoreList.map(el => escapeRegExp(el));
+		let igRegex = new RegExp (ignoreListEsc.join('|'), "i"); //-- The "i" makes it case insensitive.
+		if(ignoreList.length === 0){
+			igFilterArray = [];
 		} else {
-			settingBtn.textContent = "Afficher réglages";
+			igFilterArray = Array.from(document.querySelectorAll(".forumline > tbody > tr > td > span.name")).filter(el => igRegex.test(el.textContent));
 		}
-		toggleDiplay(igTxtArea);
-		toggleDiplay(igTxtLbl);
-		toggleDiplay(igSave);
-	  });
+		//console.log({igFilterArray});
 
+		//--------------------------------------------
+		// Boutons liste ignorés
+		createTextarea("ignoreTextArea", "Liste d'ignorés", placeTxtArea, ignoreList);
+		let igTxtArea = document.getElementById("ignoreTextArea");
+			igTxtArea.style.display = "none";
+		let igTxtLbl = document.getElementById("ignoreTextAreaLbl");
+			igTxtLbl.style.display = "none";
+		  
+		createSaveBtn("saveIgnoreList", igTxtArea);
+		let igSave = document.getElementById("saveIgnoreList");
+			igSave.style.display = "none";
+			igSave.addEventListener("click", function(e){
+			e.preventDefault();
+			exportList("igSaved", igTxtArea);
+			//console.log(igTxtArea.value);
+		});
+		  
+		createFilterBtn("ignoreList", "Filtrer ignorés", placeBtn);
+		let igBtn = document.getElementById("ignoreList");
+		igBtn.addEventListener("click", function(e){
+			e.preventDefault();
+			filter(igFilterArray);
+		});
+		  
+		// Bouton annulation de filtres
+		createFilterBtn("cancel", "Annuler filtre", placeBtn);
+		let cancelBtn = document.getElementById("cancel");
+		cancelBtn.addEventListener("click", function(e){
+			e.preventDefault();
+			cancelFilter(igFilterArray);
+		});
+		  
+		// Bouton réglages
+		createFilterBtn("settings", "Afficher réglages", placeBtn);
+		let settingBtn = document.getElementById("settings");
+		settingBtn.addEventListener("click", function(e){
+			e.preventDefault();
+			if (igTxtArea.style.display === "none"){
+				settingBtn.textContent = "Cacher réglages";
+			} else {
+				settingBtn.textContent = "Afficher réglages";
+			}
+			toggleDiplay(igTxtArea);
+			toggleDiplay(igTxtLbl);
+			toggleDiplay(igSave);
+		  });
+	}
 })();
