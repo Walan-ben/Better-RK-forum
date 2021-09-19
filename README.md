@@ -1,7 +1,7 @@
 *(English version below)*
 
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum 
-v0.8.0
+v0.9.0
 
 Cette extension améliore les forums officiels du jeu ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
@@ -13,7 +13,9 @@ Elle permet d'ajouter pour les deux forums officiels :
 * l'affichage d'icônes de nouveaux messages à l'index du forum.
 * des boutons permettant d'utiliser des balises supplémentaires pour la rédaction de messages (spoiler, char, center,...) (inspiré d'un script de jdOrandin)
 
-*Nouveauté v0.8 :* Chaque fonctionnalité peut être activée ou désactivée individuellement depuis les options de l'extension.
+Chaque fonctionnalité peut être activée ou désactivée individuellement depuis les options de l'extension.
+
+*Nouveauté v0.9 :* Chaque filtre (liste blanche, noire, d'ignoré) peut être appliqué par défaut au chargement de la page si l'utilisateur le souhaite (paramétrable dans les options de l'extension).
 
 ## Utilisation
 
@@ -65,7 +67,7 @@ Les images utilisées pour les boutons dans l'éditeur de messages sont modifié
 
 ---
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum
-v0.8.0
+v0.9.0
 
 This extension improves the official forums of the game ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
@@ -77,7 +79,9 @@ It adds for both official forums:
 * display a new posts icons on the forum index.
 * buttons to use additional tags in posts edition (spoiler, char, center,...) (inspired by a script from jdOrandin)
 
-*New in v0.8:* Each feature can be enabled or disabled individually from the extension options.
+Each feature can be enabled or disabled individually from the extension options.
+
+*New in v0.9 :* Each filter (whitelist, blacklist, ignore) can be applied by default at page load if the user wishes (configurable in the extension options).
 
 ## Usage
 
