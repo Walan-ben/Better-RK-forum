@@ -22,6 +22,8 @@ let placeTxtArea = placeBtn.parentNode.parentNode.parentNode.parentNode.appendCh
 // Sauvegarde des éléments de la table initiale
 const allTr = document.querySelectorAll(".forumline > tbody > tr");
 
+// Sauvegarde des lignes avec noms de catégories de la table initiale
+const allCateg = document.getElementsByClassName("catLeft")
 
 //--------------------------------------------
 // Fonctions création boutons et textareas
@@ -45,9 +47,31 @@ function createTextarea(name, label, place, value = []){
 	place.appendChild(td);
 }
 
+// Fonction pour tester si les lignes entre deux lignes sont toutes cachées (return true) ou non
+function betweenRows(startElem, endElem){
+  let nRowsBetween = 0;
+  let nRowsHidden = 0;
+  let startRow = startElem.parentNode;
+  let endRow = endElem.parentNode;
+  let testRow = startRow.nextElementSibling;
+  while(testRow !== endRow){
+    nRowsBetween += 1;
+		if(testRow.style.display === "none"){
+      nRowsHidden += 1;
+    }
+    testRow = testRow.nextElementSibling;
+  }
+  return nRowsBetween === nRowsHidden
+}
+
 // Fonctions filtres et annulation
 function filter(array) {
   array.forEach(el => el.parentNode.parentNode.parentNode.style.display = "none");
+  for(let i = 0; i < allCateg.length-1; i++){
+	  if(betweenRows(allCateg[i], allCateg[i+1])){
+		  allCateg[i].parentNode.style.display = "none";
+	  }
+	}
 }
 
 function cancelFilter() {
