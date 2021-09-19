@@ -51,7 +51,7 @@ function filter(array) {
 		let msgContent = wholeLine.querySelector(".postbody");
 		//console.log({msgContent});
 		msgContent.parentNode.dataset.oldContent = msgContent.parentNode.innerHTML;
-		msgContent.parentNode.innerHTML = '<span class = "postbody"><i>Better RK forum : Ce message a été retiré car son auteur fait partie de votre liste d\'ignorés.</i></span>';
+		msgContent.parentNode.innerHTML = '<span class = "postbody" style="color:red"><i>Better RK forum : Ce message a été retiré car son auteur fait partie de votre liste d\'ignorés.</i></span>';
   });
 }
 
@@ -66,6 +66,7 @@ function cancelFilter(array) {
 
 (async() => {
 	let onOffIgnore = await browser.storage.local.get("onOffIgnore");
+	let loadIgnore = await browser.storage.local.get("loadIgnore");
 	
 	if (onOffIgnore["onOffIgnore"]){
 		//----------------------------------------------
@@ -127,5 +128,10 @@ function cancelFilter(array) {
 			toggleDiplay(igTxtLbl);
 			toggleDiplay(igSave);
 		  });
+		  
+		// Application des filtres par défaut
+		if (loadIgnore["loadIgnore"]){
+			filter(igFilterArray);
+		}
 	}
 })();

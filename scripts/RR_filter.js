@@ -80,6 +80,8 @@ function cancelFilter() {
 
 (async() => {
 	let onOffWL = await browser.storage.local.get("onOffWL");
+	let loadWL = await browser.storage.local.get("loadWL");
+	let loadBL = await browser.storage.local.get("loadBL");
 	
 	if (onOffWL["onOffWL"]){
 		  //----------------------------------------------
@@ -119,6 +121,8 @@ function cancelFilter() {
 			e.preventDefault();
 			filter(wlFilterArray);
 		  });
+		  
+
 
 		  // Boutons liste noire
 		  createTextarea("blackTextArea", "Liste noire", placeTxtArea, blackList);
@@ -142,7 +146,8 @@ function cancelFilter() {
 			e.preventDefault();
 			filter(blFilterArray);
 		  });
-		  
+		
+
 		  // Bouton annulation de filtres
 		  createFilterBtn("cancel", "Annuler filtres", placeBtn);
 		  let cancelBtn = document.getElementById("cancel");
@@ -168,6 +173,14 @@ function cancelFilter() {
 			toggleDiplay(blTxtLbl);
 			toggleDiplay(blSave);
 		  });
+		
+		// Application des filtres par défaut
+		if (loadWL["loadWL"]){
+			filter(wlFilterArray);
+		}			
+		if (loadBL["loadBL"]){
+			filter(blFilterArray);
+		}	
 	}
 
 })();
