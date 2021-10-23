@@ -45,7 +45,7 @@ L'extension rajoute quatre boutons lors de la visite de l'index ou de l'une des 
 Pour définir les listes blanches et noires, il faut remplir les zones de texte correspondantes de la partie réglages avec la liste des catégories que l'on souhaite afficher ou exclure. 
 Les noms des différentes catégories doivent être séparés par des points-virgules. 
 Par exemple : 
-> Early Access ; Babel Tower II ; International Justice ; OOC Justice Rules and Justice Records ; International KAP ;
+> Early Access ; Babel Tower II ; International Justice ; OOC Justice Rules and Justice Records ; 
 
 Ces listes sont *distinctes* entre les deux forums.
 
@@ -175,7 +175,7 @@ The extension adds four buttons when visiting the index or any of the new posts 
 To define the white and black lists, you must fill in the corresponding text boxes in the settings section with the list of categories you wish to display or exclude. 
 The names of the different categories must be separated by semicolons. 
 For example: 
-> Early Access; Babel Tower II; International Justice; OOC Justice Rules and Justice Records; International KAP ;
+> Early Access; Babel Tower II; International Justice; OOC Justice Rules and Justice Records; 
 
 These lists are *distinct* between the two forums.
 
