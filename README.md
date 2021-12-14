@@ -23,7 +23,7 @@ Tous les réglages sont sauvegardés *localement* sur le navigateur (autrement d
 Celsius a confirmé [sur Discord](https://discord.com/channels/600977495411392512/876408245768564736/877125248414281749) qu'elle ne leur posait pas de problèmes.*
 
 
-## Compatibilité
+## Installation et compatibilité
 Cette extension est disponible pour [Firefox](https://addons.mozilla.org/fr/firefox/addon/better-rk-forum/) et [Chrome](https://chrome.google.com/webstore/detail/better-rk-forum/ijncinfepcgeaddehnlbkkggfjmfjnfn/) (elle devrait aussi fonctionner avec Edge et Opera, puisqu'ils acceptent les extensions Chrome). 
 Elle fonctionne également sur téléphone à condition d'utiliser une application de navigation qui accepte les extensions (Firefox Nightly, Brave, Kiwi browser...).
 
@@ -153,7 +153,7 @@ All settings are saved *locally* on the browser (in other words, if you change b
 Celsius has confirmed [on Discord](https://discord.com/channels/600977495411392512/876408245768564736/877125248414281749) that they have no problems with it.
 
 
-## Compatibility
+## Setup and Compatibility
 This extension is available for [Firefox](https://addons.mozilla.org/fr/firefox/addon/better-rk-forum/) and [Chrome](https://chrome.google.com/webstore/detail/better-rk-forum/ijncinfepcgeaddehnlbkkggfjmfjnfn/) (it should also work with Edge and Opera, since they accept Chrome extensions). 
 It also works on phones if you use a browser application that accepts extensions (Firefox Nightly, Brave, Kiwi browser...).
 
