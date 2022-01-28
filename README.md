@@ -1,7 +1,7 @@
 *(English version below)*
 
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum 
-v0.9.0
+v0.9.1
 
 Cette extension améliore les forums officiels du jeu ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com). 
 
@@ -101,6 +101,10 @@ Si vous avez des suggestions de fonctionnalités, n'hésitez pas à m'en faire p
 <details>
   <summary>Cliquez pour afficher les notes de patchs</summary>
  
+   * __Version 0.9.1 :__ 
+    * *Modification :* Après avoir appliqué une des balises forum ajoutées par l'extension, le curseur devrait rester au même endroit du texte (au lieu d'aller tout en bas).
+    * *Correctif :* Suppression des balises fermantes non nécessaires pour les tags de lignes (hr, hr-dashed, hr-dotted). Merci à @Kapten.
+	
   * __Version 0.9.0 :__ 
     * *Nouvelle fonctionnalité :* Chaque filtre (liste blanche, noire, d'ignoré) peut être appliqué par défaut au chargement de la page si l'utilisateur le souhaite (paramétrable dans les options de l'extension).
     * *Modification :* Les noms des "catégories" seront désormais cachés également lorsque tous les forums à l'intérieur sont cachés
@@ -131,7 +135,7 @@ Les images utilisées pour les boutons dans l'éditeur de messages sont modifié
 
 ---
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum
-v0.9.0
+v0.9.1
 
 This extension improves the official forums of the game ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
@@ -231,6 +235,10 @@ If you have any suggestions for features, please let me know.
 ## Patch Notes
 <details>
   <summary>Click to view patch notes</summary>
+  
+  * __Version 0.9.1 :__ 
+    * *Change :* After applying one of the tags from the extension, mouse cursor should stay at the same place instead of moving at the bottom of the text area.
+    * *Correction :* Suppression of non necessary closing tags for lines (hr, hr-dashed, hr-dotted). Thanks to @Kapten.
  
   * __Version 0.9.0 :__ 
     * *New feature :* Each filter (whitelist, blacklist, ignore) can be applied by default on page load if the user wants (configurable in the extension options).

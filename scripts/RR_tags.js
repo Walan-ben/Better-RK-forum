@@ -19,61 +19,71 @@ const newBtns = [{
     name: "strike", 
     help: "Texte barré : [strike]texte[/strike]", 
     type: "image", 
-    src: iconStrike
+    src: iconStrike,
+	tagType: "double"
   },
   {
     name: "center", 
     help: "Texte centré : [center]texte à centrer[/center]", 
     type: "image", 
-    src: iconCenter
+    src: iconCenter,
+	tagType: "double"
   },
 	{
     name: "right", 
     help: "Texté aligné à droite : [right]texte à aligner[/right]", 
     type: "image", 
-    src: iconRight
+    src: iconRight,
+	tagType: "double"
   },
   {
     name: "spoiler", 
     help: "Texte à cacher : [spoiler]Texte caché[/spoiler]", 
     type: "image", 
-    src: iconSpoiler
+    src: iconSpoiler,
+	tagType: "double"
   },
   {
     name: "sup", 
     help: "Texte à mettre en exposant : [sup]Exposant[/sup]", 
     type: "image", 
-    src: iconSup
+    src: iconSup,
+	tagType: "double"
   },
   {
     name: "sub", 
     help: "Texte à mettre en indice : [sub]Indice[/sub]", 
     type: "image", 
-    src: iconSub
+    src: iconSub,
+	tagType: "double"
   },
   {
     name: "char", 
     help: "Insérer la fiche d'un joueur : [char]Nom IG[/char]", 
     type: "image", 
-    src: iconChar
+    src: iconChar,
+	tagType: "double"
   },
   {
     name:"hr",
     help:"Barre de séparation pleine : [ħr] ou [hr={Nombre compris entre 1 et 99}]",
     type: "image", 
-    src: iconRule
+    src: iconRule,
+	tagType: "single"
   },
   {
     name:"hr-dashed",
     help:"Barre de séparation en tirets : [hr-dashed] ou [hr-dashed={Nombre compris entre 1 et 99}]",
     type: "image", 
-    src: iconDash
+    src: iconDash,
+	tagType: "single"
   },
   {
     name:"hr-dotted",
     help:"Barre de séparation en pointillés : [hr-dotted] ou [hr-dotted={Nombre compris entre 1 et 99}]",
     type: "image", 
-    src: iconDot
+    src: iconDot,
+	tagType: "single"
   }
 ];
 
@@ -117,8 +127,11 @@ function createBtn(ref, loc) {
 function insertTag(e) {
   let openTag = "[" + e.name + "]";
   let closeTag = "[/" + e.name + "]";
+  if (e.tagType == "single") {
+	  closeTag = "";
+  }
   let locTxtArea = document.querySelector(placeTxtArea);
-  //let savedPos = locTxtArea.scrollTop;
+  let savedPos = locTxtArea.scrollTop;
   let selectionInter, selectionStart, selectionEnd;
   selectionStart = locTxtArea.value.substring(0, locTxtArea.selectionStart);
   selectionInter = locTxtArea.value.substring(locTxtArea.selectionStart, locTxtArea.selectionEnd);
@@ -126,7 +139,7 @@ function insertTag(e) {
   locTxtArea.value = selectionStart + openTag + selectionInter + closeTag + selectionEnd; 
   locTxtArea.focus(); 
   locTxtArea.setSelectionRange(selectionStart.length + openTag.length, selectionStart.length + openTag.length + selectionInter.length);
-  //locTxtArea.scrollTop = savedPos;
+  locTxtArea.scrollTop = savedPos;
 }
 
 // Ajout des boutons
