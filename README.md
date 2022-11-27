@@ -1,11 +1,11 @@
 *(English version below)*
 
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum 
-v0.9.1
+v0.9.2
 
 Cette extension améliore les forums officiels du jeu ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com). 
 
-Elle permet d'ajouter pour les deux forums officiels :
+Elle permet d'ajouter pour les deux forums officiels et celui de Rome:
 
 * des filtres à l'index du forum.
 * des filtres aux pages de recherches de nouveaux messages.
@@ -15,7 +15,7 @@ Elle permet d'ajouter pour les deux forums officiels :
 
 Chaque fonctionnalité peut être activée ou désactivée individuellement depuis les options de l'extension.
 
-*Nouveauté v0.9 :* Chaque filtre (liste blanche, noire, d'ignoré) peut être appliqué par défaut au chargement de la page si l'utilisateur le souhaite (paramétrable dans les options de l'extension).
+*Nouveauté v0.9.2 :* les fonctionnalités de l'extension s'appliquent désormais aussi au forum de Rome.
 
 Tous les réglages sont sauvegardés *localement* sur le navigateur (autrement dit, si vous changez de navigateur ou d'ordinateur, il faudra refaire le paramétrage) et seront appliqués une fois la page rechargée. 
 
@@ -47,7 +47,7 @@ Les noms des différentes catégories doivent être séparés par des points-vir
 Par exemple : 
 > Early Access ; Babel Tower II ; International Justice ; OOC Justice Rules and Justice Records ; 
 
-Ces listes sont *distinctes* entre les deux forums.
+Ces listes sont *distinctes* entre les trois forums.
 
 ### Liste d'ignorés
 L'extension ajoute trois boutons lors de la lecture d'un sujet :
@@ -59,7 +59,7 @@ L'extension ajoute trois boutons lors de la lecture d'un sujet :
 Pour définir la liste d'ignorés, il faut remplir la zone de texte correspondante de la partie réglages avec la liste des comptes que l'on souhaite ignorer. 
 Les noms des différents comptes doivent être séparés par des points-virgules. 
 
-Cette liste est *commune* aux deux forums.
+Cette liste est *commune* aux trois forums.
 
 ### Icônes de nouveaux messages
 Sur l'index du forum, cette fonctionnalité change l'icône des catégories pour signaler que de nouveaux messages ont été postés.
@@ -100,6 +100,9 @@ Si vous avez des suggestions de fonctionnalités, n'hésitez pas à m'en faire p
 ## Notes de patchs
 <details>
   <summary>Cliquez pour afficher les notes de patchs</summary>
+  
+     * __Version 0.9.2 :__ 
+    * *Modification :* Les fonctionnalités de l'extension s'appliquent désormais aussi au forum de Rome.
  
    * __Version 0.9.1 :__ 
     * *Modification :* Après avoir appliqué une des balises forum ajoutées par l'extension, le curseur devrait rester au même endroit du texte (au lieu d'aller tout en bas).
@@ -135,11 +138,11 @@ Les images utilisées pour les boutons dans l'éditeur de messages sont modifié
 
 ---
 # ![Better RK forum logo](https://i14.servimg.com/u/f14/11/97/33/52/icon4810.png) Better-RK-forum
-v0.9.1
+v0.9.2
 
 This extension improves the official forums of the game ["Renaissance Kingdoms"](https://www.renaissancekingdoms.com).
 
-It adds for both official forums:
+It adds for both official forums and Rome's forum:
 
 * filters to the forum index.
 * filters to the search pages for new posts.
@@ -149,7 +152,7 @@ It adds for both official forums:
 
 Each feature can be enabled or disabled individually from the extension options.
 
-*New in v0.9 :* Each filter (whitelist, blacklist, ignore) can be applied by default at page load if the user wishes (configurable in the extension options).
+*New in v0.9.2 :* features of the extension now also work for the Rome's forum.
 
 All settings are saved *locally* on the browser (in other words, if you change browser or computer, you will have to redo the settings) and will be applied once the page is reloaded. 
 
@@ -181,7 +184,7 @@ The names of the different categories must be separated by semicolons.
 For example: 
 > Early Access; Babel Tower II; International Justice; OOC Justice Rules and Justice Records; 
 
-These lists are *distinct* between the two forums.
+These lists are *distinct* between the three forums.
 
 ### Ignore list
 The extension adds three buttons when reading a topic:
@@ -193,7 +196,7 @@ The extension adds three buttons when reading a topic:
 To define the ignore list, you must fill in the corresponding text box in the settings section with the list of accounts you wish to ignore. 
 The names of the different accounts must be separated by semicolons. 
 
-The list is *common* to both forums.
+The list is *common* to all three forums.
 
 ### New posts icons
 On the forum index, this feature changes categories' icon when there are new posts in it.
@@ -236,6 +239,9 @@ If you have any suggestions for features, please let me know.
 <details>
   <summary>Click to view patch notes</summary>
   
+   * __Version 0.9.2 :__ 
+    * *Change :* Features of the extension now also work for the Rome's forum.
+	
   * __Version 0.9.1 :__ 
     * *Change :* After applying one of the tags from the extension, mouse cursor should stay at the same place instead of moving at the bottom of the text area.
     * *Correction :* Suppression of non necessary closing tags for lines (hr, hr-dashed, hr-dotted). Thanks to @Kapten.

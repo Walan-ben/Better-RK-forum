@@ -4,7 +4,11 @@ let prefix;
 if (window.location.hostname === "forum.renaissancekingdoms.com"){
 	prefix = "forum1";
     } else {
-  prefix = "forum2";
+		if (window.location.hostname === "forum2.renaissancekingdoms.com"){
+			prefix = "forum2";
+		} else {
+			prefix = "rome";
+		}
 }
 
 //--------------------------------------------
