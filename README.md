@@ -101,8 +101,8 @@ Si vous avez des suggestions de fonctionnalités, n'hésitez pas à m'en faire p
 <details>
   <summary>Cliquez pour afficher les notes de patchs</summary>
   
-     * __Version 0.9.2 :__ 
-    * *Modification :* Les fonctionnalités de l'extension s'appliquent désormais aussi au forum de Rome.
+    * __Version 0.9.2 :__ 
+	 * *Modification :* Les fonctionnalités de l'extension s'appliquent désormais aussi au forum de Rome.
  
    * __Version 0.9.1 :__ 
     * *Modification :* Après avoir appliqué une des balises forum ajoutées par l'extension, le curseur devrait rester au même endroit du texte (au lieu d'aller tout en bas).
