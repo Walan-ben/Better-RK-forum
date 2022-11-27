@@ -101,10 +101,8 @@ Si vous avez des suggestions de fonctionnalités, n'hésitez pas à m'en faire p
 <details>
   <summary>Cliquez pour afficher les notes de patchs</summary>
   
-    * __Version 0.9.2 :__ 
-	 * *Modification :* Les fonctionnalités de l'extension s'appliquent désormais aussi au forum de Rome.
- 
-   * __Version 0.9.1 :__ 
+  * __Version 0.9.2 :__ *Modification :* Les fonctionnalités de l'extension s'appliquent désormais aussi au forum de Rome.
+  * __Version 0.9.1 :__ 
     * *Modification :* Après avoir appliqué une des balises forum ajoutées par l'extension, le curseur devrait rester au même endroit du texte (au lieu d'aller tout en bas).
     * *Correctif :* Suppression des balises fermantes non nécessaires pour les tags de lignes (hr, hr-dashed, hr-dotted). Merci à @Kapten.
 	
@@ -239,9 +237,7 @@ If you have any suggestions for features, please let me know.
 <details>
   <summary>Click to view patch notes</summary>
   
-   * __Version 0.9.2 :__ 
-    * *Change :* Features of the extension now also work for the Rome's forum.
-	
+  * __Version 0.9.2 :__ *Change :* Features of the extension now also work for the Rome's forum.	
   * __Version 0.9.1 :__ 
     * *Change :* After applying one of the tags from the extension, mouse cursor should stay at the same place instead of moving at the bottom of the text area.
     * *Correction :* Suppression of non necessary closing tags for lines (hr, hr-dashed, hr-dotted). Thanks to @Kapten.
